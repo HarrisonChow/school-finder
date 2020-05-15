@@ -1,17 +1,531 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title><%= htmlWebpackPlugin.options.title %></title>
-  </head>
-  <body>
-    <noscript>
-      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
+
+<!-- <head data-site-url="https://services.education.nsw.gov.au"> -->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  <link rel="stylesheet" href="assets/css/vendor/fontawesome/all.css">
+  <link rel="stylesheet" href="assets/css/vendor/fontawesome-pro/all.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/7.3.3/jquery.mmenu.all.css">
+  <link rel="stylesheet" href="assets/css/vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/core.css?r=undefined" media="screen">
+  <link rel="stylesheet" href="assets/css/print.css?r=undefined" media="print">
+  <link rel="stylesheet" href="assets/css/site.css?r=01def7514" media="screen">
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBw00QbsescBPPtb20hhJwluvJxCEfaaUk&libraries=places"></script>
+  <title>Search Results | Division Name</title>
+  <!--[if lt IE 9]>
+  <script src='https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js' type='text/javascript' />
+  <script src='https://oss.maxcdn.com/respond/1.4.2/respond.min.js' type='text/javascript' />
+  <![endif]-->
+</head>
+<!--[if gt IE 9 | !IE ]><!-->
+
+
+<body>
+
+  <nav class="gel-mobile-nav mm-menu mm-menu_offcanvas mm-menu_pagedim-black" id="gel-mnav" role="dialog" aria-labelledby="gel-mobile-nav_header-lead-dialog" aria-hidden="true">
+     <button class="gel-mobile-nav_icon-close" id="gel-mobile-nav_icon-close-id" aria-label="Close main menu" tabindex="-1"></button><button class="mm-tabstart" aria-hidden="true" role="presentation"></button>
+     <div class="mm-panels">
+        <div id="mm-1" class="mm-panel mm-panel_has-navbar mm-panel_opened" aria-hidden="true">
+           <div class="mm-navbar"><a class="mm-navbar__title">Menu</a></div>
+           <ul class="gel-mobile-nav_list mm-listview">
+              <li class="gel-mobile-nav_header mm-listitem">
+                 <span id="gel-mobile-nav_header-lead-dialog" aria-hidden="true" class="mm-listitem__text">Megamenu mobile nav</span><a class="gel-mobile-nav_header-logo-link mm-listitem__text mm-listitem_selected" href="#" title="NSW Department of Education"><img class="gel-mobile-nav_header-logo-image" src="assets/images/doe-logo-blue.svg" alt="NSW Department of Education logo"></a>
+                 <p class="gel-mobile-nav_header-lead">Welcome to</p>
+                 <h1>education.nsw.gov.au      </h1>
+              </li>
+              <li class="gel-mobile-nav_list-links mm-listitem"><a href="#" class="mm-listitem__text">Early childhood education</a><a class="mm-btn mm-btn_next mm-listitem__btn" href="#mm-2" aria-owns="mm-2" aria-haspopup="true"><span class="mm-sronly">Open submenu</span></a>
+              </li>
+              <li class="gel-mobile-nav_list-links mm-listitem"><a href="/about" class="mm-listitem__text">Public Schools</a><a class="mm-btn mm-btn_next mm-listitem__btn" href="#mm-3" aria-owns="mm-3" aria-haspopup="true"><span class="mm-sronly">Open submenu</span></a>
+              </li>
+              <li class="gel-mobile-nav_list-links mm-listitem"><a href="/about" class="mm-listitem__text">Teaching and learning</a><a class="mm-btn mm-btn_next mm-listitem__btn" href="#mm-4" aria-owns="mm-4" aria-haspopup="true"><span class="mm-sronly">Open submenu</span></a>
+              </li>
+              <li class="gel-mobile-nav_list-links mm-listitem"><a href="/about" class="mm-listitem__text">Student wellbeing</a><a class="mm-btn mm-btn_next mm-listitem__btn" href="#mm-5" aria-owns="mm-5" aria-haspopup="true"><span class="mm-sronly">Open submenu</span></a>
+              </li>
+              <li class="gel-mobile-nav_list-links mm-listitem"><a href="/about" class="mm-listitem__text">Our priorities</a><a class="mm-btn mm-btn_next mm-listitem__btn" href="#mm-6" aria-owns="mm-6" aria-haspopup="true"><span class="mm-sronly">Open submenu</span></a>
+              </li>
+              <li class="gel-mobile-nav_list-links gel-mobile-nav_list-childless mm-listitem"><a href="/about" class="mm-listitem__text">Policy Library<span class="gel-mobile-nav_list-childless-icon" aria-hidden="true"></span></a></li>
+              <li class="gel-mobile-nav_list-links mm-listitem"><a href="/about" class="mm-listitem__text">About us</a><a class="mm-btn mm-btn_next mm-listitem__btn" href="#mm-7" aria-owns="mm-7" aria-haspopup="true"><span class="mm-sronly">Open submenu</span></a>
+              </li>
+           </ul>
+        </div>
+        <div id="mm-2" class="mm-panel mm-hidden mm-panel_has-navbar" aria-hidden="true">
+           <div class="mm-navbar"><a class="mm-btn mm-btn_prev mm-navbar__btn" href="#mm-1" aria-owns="mm-1" aria-haspopup="true"><span class="mm-sronly">Close submenu</span></a><a class="mm-navbar__title" href="#mm-1">Early childhood education</a></div>
+           <ul class="mm-listview">
+              <div class="hidden-xs gel-mobile-nav_list-links-intro mm-listitem">
+                 <a href="#" class="mm-listitem__text">
+                    <h3>Early childhood education</h3>
+                 </a>
+                 <p>Two line description about the top level navigation label which will assist in obtaining context with a maximum character count of 150 characters.</p>
+              </div>
+              <li class="mm-listitem"><a href="#" class="mm-listitem__text">Information for parents and carers </a></li>
+              <li class="mm-listitem"><a href="#" class="mm-listitem__text">Working in early childhood education</a></li>
+              <li class="mm-listitem"><a href="#" class="mm-listitem__text">Investigation, feedback and complaints</a></li>
+              <li class="mm-listitem"><a href="#" class="mm-listitem__text">Operating an early childhood education service </a></li>
+              <li class="mm-listitem"><a href="#" class="mm-listitem__text">Whats happening in the early childhood education sector </a></li>
+           </ul>
+        </div>
+        <div id="mm-3" class="mm-panel mm-hidden mm-panel_has-navbar" aria-hidden="true">
+           <div class="mm-navbar"><a class="mm-btn mm-btn_prev mm-navbar__btn" href="#mm-1" aria-owns="mm-1" aria-haspopup="true"><span class="mm-sronly">Close submenu</span></a><a class="mm-navbar__title" href="#mm-1">Public Schools</a></div>
+           <ul class="mm-listview">
+              <div class="hidden-xs gel-mobile-nav_list-links-intro mm-listitem">
+                 <a href="#" class="mm-listitem__text">
+                    <h3>Public Schools</h3>
+                 </a>
+                 <p>Two line description about the top level navigation label which will assist in obtaining context with a maximum character count of 150 characters.</p>
+              </div>
+              <li class="mm-listitem"><a href="#" class="mm-listitem__text">Community languages schools </a></li>
+              <li class="mm-listitem"><a href="#" class="mm-listitem__text">Going to a public school</a></li>
+              <li class="mm-listitem"><a href="#" class="mm-listitem__text">Selective high schools and opportunity classes</a></li>
+              <li class="mm-listitem"><a href="#" class="mm-listitem__text">Assisted School Travel Program</a></li>
+           </ul>
+        </div>
+        <div id="mm-4" class="mm-panel mm-hidden mm-panel_has-navbar" aria-hidden="true">
+           <div class="mm-navbar"><a class="mm-btn mm-btn_prev mm-navbar__btn" href="#mm-1" aria-owns="mm-1" aria-haspopup="true"><span class="mm-sronly">Close submenu</span></a><a class="mm-navbar__title" href="#mm-1">Teaching and learning</a></div>
+           <ul class="mm-listview">
+              <div class="hidden-xs gel-mobile-nav_list-links-intro mm-listitem">
+                 <a href="#" class="mm-listitem__text">
+                    <h3>Teaching and learning</h3>
+                 </a>
+                 <p>Two line description about the top level navigation label which will assist in obtaining context with a maximum character count of 150 characters.</p>
+              </div>
+              <li class="mm-listitem"><a href="#" class="mm-listitem__text">Curriculum</a></li>
+              <li class="mm-listitem"><a href="#" class="mm-listitem__text">Aboriginal education and communities</a></li>
+              <li class="mm-listitem"><a href="#" class="mm-listitem__text">Professional learning</a></li>
+              <li class="mm-listitem"><a href="#" class="mm-listitem__text">Student assessment</a></li>
+              <li class="mm-listitem"><a href="#" class="mm-listitem__text">Disability,learning and support</a></li>
+              <li class="mm-listitem"><a href="#" class="mm-listitem__text">School excellence and accountability</a></li>
+           </ul>
+        </div>
+        <div id="mm-5" class="mm-panel mm-hidden mm-panel_has-navbar" aria-hidden="true">
+           <div class="mm-navbar"><a class="mm-btn mm-btn_prev mm-navbar__btn" href="#mm-1" aria-owns="mm-1" aria-haspopup="true"><span class="mm-sronly">Close submenu</span></a><a class="mm-navbar__title" href="#mm-1">Student wellbeing</a></div>
+           <ul class="mm-listview">
+              <div class="hidden-xs gel-mobile-nav_list-links-intro mm-listitem">
+                 <a href="#" class="mm-listitem__text">
+                    <h3>Student wellbeing</h3>
+                 </a>
+                 <p>Two line description about the top level navigation label which will assist in obtaining context with a maximum character count of 150 characters.</p>
+              </div>
+              <li class="mm-listitem"><a href="#" class="mm-listitem__text">Counselling and psychology services</a></li>
+              <li class="mm-listitem"><a href="#" class="mm-listitem__text">Attendance, behaviour and engagement</a></li>
+              <li class="mm-listitem"><a href="#" class="mm-listitem__text">Child protection</a></li>
+              <li class="mm-listitem"><a href="#" class="mm-listitem__text">Health and physical care </a></li>
+              <li class="mm-listitem"><a href="#" class="mm-listitem__text">Whole school approach</a></li>
+           </ul>
+        </div>
+        <div id="mm-6" class="mm-panel mm-hidden mm-panel_has-navbar" aria-hidden="true">
+           <div class="mm-navbar"><a class="mm-btn mm-btn_prev mm-navbar__btn" href="#mm-1" aria-owns="mm-1" aria-haspopup="true"><span class="mm-sronly">Close submenu</span></a><a class="mm-navbar__title" href="#mm-1">Our priorities</a></div>
+           <ul class="mm-listview">
+              <div class="hidden-xs gel-mobile-nav_list-links-intro mm-listitem">
+                 <a href="#" class="mm-listitem__text">
+                    <h3>Our priorities</h3>
+                 </a>
+                 <p>Two line description about the top level navigation label which will assist in obtaining context with a maximum character count of 150 characters.</p>
+              </div>
+              <li class="mm-listitem"><a href="#" class="mm-listitem__text">Work more effectively</a></li>
+              <li class="mm-listitem"><a href="#" class="mm-listitem__text">Ensure quality early childhood education</a></li>
+              <li class="mm-listitem"><a href="#" class="mm-listitem__text">Innovate for the future</a></li>
+              <li class="mm-listitem"><a href="#" class="mm-listitem__text">Enhance student wellbeing</a></li>
+              <li class="mm-listitem"><a href="#" class="mm-listitem__text">Improve student outcomes</a></li>
+              <li class="mm-listitem"><a href="#" class="mm-listitem__text">Strengthen teaching quality and school leadership</a></li>
+           </ul>
+        </div>
+        <div id="mm-7" class="mm-panel mm-hidden mm-panel_has-navbar" aria-hidden="true">
+           <div class="mm-navbar"><a class="mm-btn mm-btn_prev mm-navbar__btn" href="#mm-1" aria-owns="mm-1" aria-haspopup="true"><span class="mm-sronly">Close submenu</span></a><a class="mm-navbar__title" href="#mm-1">About us</a></div>
+           <ul class="mm-listview">
+              <div class="hidden-xs gel-mobile-nav_list-links-intro mm-listitem">
+                 <a href="#" class="mm-listitem__text">
+                    <h3>About us</h3>
+                 </a>
+                 <p>Two line description about the top level navigation label which will assist in obtaining context with a maximum character count of 150 characters.</p>
+              </div>
+              <li class="mm-listitem"><a href="#" class="mm-listitem__text">Supplying to us</a></li>
+              <li class="mm-listitem"><a href="#" class="mm-listitem__text">Jobs and opportunities</a></li>
+              <li class="mm-listitem"><a href="#" class="mm-listitem__text">Our people and structure</a></li>
+              <li class="mm-listitem"><a href="#" class="mm-listitem__text">Rights and accountability</a></li>
+              <li class="mm-listitem"><a href="#" class="mm-listitem__text">Using school facilities</a></li>
+              <li class="mm-listitem"><a href="#" class="mm-listitem__text">Strategies and reports</a></li>
+           </ul>
+        </div>
+     </div>
+     <button class="mm-tabend" aria-hidden="true" role="presentation"></button>
+  </nav>
+  <div class="gel-skiplink-container" id="top-mobile">
+    <div class="gel-skiplink">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <ul>
+              <li><a class="gel-skiplink__link" id="top-desktop" href="#content">Skip to content</a></li>
+              <li><a class="gel-skiplink__link" href="#search">Skip to search</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="gel-global-header-container" role="banner">
+    <div class="gel-global-header gel-remove-external-link">
+      <div class="container">
+        <div class="row">
+          <div class="col-12"><a class="gel-global-header__header" href="https://education.nsw.gov.au" title="NSW Department of Education"><abbr title="NSW Department of Education" aria-hidden="true">NSW DoE</abbr><span class="sr-only">External link</span><span class="gel-external-link"></span></a>
+            <div class="global-header-right-nav row">
+              <div class="gel_google_translate" id="google_translate_element">
+                <script type="text/javascript">
+                  function googleTranslateElementInit() {
+                    if(!(/iPhone|iPad|iPod|Android|webOS|BlackBerry|Opera Mini|IEMobile/i.test(navigator.userAgent) )) {
+                      new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false}, 'google_translate_element');
+                    }
+                  }
+                </script>
+                <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+              </div>
+              <div class="global-header-links-right">
+                <div class="gel-global-links dropdown">
+                  <button class="gel-global-link-button" id="logindropdownbtn" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Login Menu"><span class="global-link-button-txt" aria-hidden="false">Log in</span><span class="gel-link-icon gel-visible-small" aria-hidden="true"></span></button>
+                  <ul class="gel-global-links-dropdown dropdown-menu dropdown-menu-right" aria-labelledby="logindropdownbtn">
+                    <li><h4>Staff</h4>
+                      <ul class="gel-link-list">
+                        <li><span class="gel-link-list-icon" aria-hidden="true"></span><a class="dropdown-item" href="#" title="">Staff portal</a></li>
+                        <li><span class="gel-link-list-icon" aria-hidden="true"></span><a class="dropdown-item" href="#" title="">Inside the department (staff intranet)</a></li>
+                      </ul>
+                    </li>
+                    <li><h4>Students</h4>
+                      <ul class="gel-link-list">
+                        <li><span class="gel-link-list-icon" aria-hidden="true"></span><a class="dropdown-item" href="#" title="">Student portal</a></li>
+                      </ul>
+                    </li>
+                    <li><h4>Other users</h4>
+                      <ul class="gel-link-list">
+                        <li><span class="gel-link-list-icon" aria-hidden="true"></span><a class="dropdown-item" href="#" title="">Extranet</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <nav class="gel-meganav navbar navbar-expand-md d-none d-md-block">
+    <div class="container gel-remove-external-link">
+      <div class="container-fluid gel-meganav__main-menu">
+        <div class="row navbar-header">
+          <div class="gel-meganav-logo col-2 col-lg-1"><a class="gel-meganav-logo__link" href="https://education.nsw.gov.au" title="NSW Department of Education"><img class="gel-meganav-logo__image" src="assets/images/doe-logo-blue.svg" alt="NSW Department of Education logo"><span class="sr-only">External link</span><span class="gel-external-link"></span></a></div>
+          <div class="gel-meganav-menulinks col-10 col-lg-11">
+            <div class="collapse navbar-collapse" id="gel-meganav-collapse-1">
+              <ul class="navbar-nav mr-auto">
+                <li class="gel-meganav_dropdown nav-item dropdown dropdown-meganav"><a class="dropdown-toggle nav-link" data-toggle="dropdown" id="dropdownMenuButton" aria-haspopup="true" aria-expanded="false" href="#">Early childhood education</a>
+                  <div class="dropdown-menu meganav gel-meganav_dropdown__subnav" aria-labelledby="dropdownMenuButton">
+                    <h3 class="gel-meganav_dropdown__subnav-title" aria-label="Early childhood education"><a class="gel-meganav_dropdown__subnav-title-link" id="megalink1" href="#" aria-label="Early childhood education">Early childhood education</a></h3>
+                    <div class="gel-meganav_dropdown__subnav-desc">
+                      <p>Two line description about the top level navigation label which will assist in obtaining context with a maximum character count of 150 characters.</p>
+                      <div class="gel-meganav_dropdown__subnav-design"></div>
+                    </div>
+                    <ul class="list-unstyled card-columns">
+                      <li class="gel-meganav-mega-link"> <a href="#"><span class="gel-meganav-mega-link_title">Information for parents and carers </span><span class="gel-meganav-mega-link_title-icon" aria-hidden="true"></span></a></li>
+                      <li class="gel-meganav-mega-link"> <a href="#"><span class="gel-meganav-mega-link_title">Working in early childhood education</span><span class="gel-meganav-mega-link_title-icon" aria-hidden="true"></span></a></li>
+                      <li class="gel-meganav-mega-link"> <a href="#"><span class="gel-meganav-mega-link_title">Investigation, feedback and complaints</span><span class="gel-meganav-mega-link_title-icon" aria-hidden="true"></span></a></li>
+                      <li class="gel-meganav-mega-link"> <a href="#"><span class="gel-meganav-mega-link_title">Operating an early childhood education service </span><span class="gel-meganav-mega-link_title-icon" aria-hidden="true"></span></a></li>
+                      <li class="gel-meganav-mega-link"> <a href="#"><span class="gel-meganav-mega-link_title">Whats happening in the early childhood education sector </span><span class="gel-meganav-mega-link_title-icon" aria-hidden="true"></span></a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="gel-meganav_dropdown nav-item dropdown dropdown-meganav"><a class="dropdown-toggle nav-link" data-toggle="dropdown" id="dropdownMenuButton" aria-haspopup="true" aria-expanded="false" href="#">Public schools</a>
+                  <div class="dropdown-menu meganav gel-meganav_dropdown__subnav" aria-labelledby="dropdownMenuButton">
+                    <h3 class="gel-meganav_dropdown__subnav-title" aria-label="Public schools"><a class="gel-meganav_dropdown__subnav-title-link" id="megalink2" href="#" aria-label="Public schools">Public schools</a></h3>
+                    <div class="gel-meganav_dropdown__subnav-desc">
+                      <p>Two line description about the top level navigation label which will assist in obtaining context with a maximum character count of 150 characters.</p>
+                      <div class="gel-meganav_dropdown__subnav-design"></div>
+                    </div>
+                    <ul class="list-unstyled card-columns">
+                      <li class="gel-meganav-mega-link"> <a href="#"><span class="gel-meganav-mega-link_title">Community languages schools </span><span class="gel-meganav-mega-link_title-icon" aria-hidden="true"></span></a></li>
+                      <li class="gel-meganav-mega-link"> <a href="#"><span class="gel-meganav-mega-link_title">Going to a public school</span><span class="gel-meganav-mega-link_title-icon" aria-hidden="true"></span></a></li>
+                      <li class="gel-meganav-mega-link"> <a href="#"><span class="gel-meganav-mega-link_title">Selective high schools and opportunity classes</span><span class="gel-meganav-mega-link_title-icon" aria-hidden="true"></span></a></li>
+                      <li class="gel-meganav-mega-link"> <a href="#"><span class="gel-meganav-mega-link_title">Assisted School Travel Program</span><span class="gel-meganav-mega-link_title-icon" aria-hidden="true"></span></a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="gel-meganav_dropdown nav-item dropdown dropdown-meganav"><a class="dropdown-toggle nav-link" data-toggle="dropdown" id="dropdownMenuButton" aria-haspopup="true" aria-expanded="false" href="#">Teaching and learning</a>
+                  <div class="dropdown-menu meganav gel-meganav_dropdown__subnav" aria-labelledby="dropdownMenuButton">
+                    <h3 class="gel-meganav_dropdown__subnav-title" aria-label="Teaching and learning"><a class="gel-meganav_dropdown__subnav-title-link" id="megalink3" href="#" aria-label="Teaching and learning">Teaching and learning</a></h3>
+                    <div class="gel-meganav_dropdown__subnav-desc">
+                      <p>Two line description about the top level navigation label which will assist in obtaining context with a maximum character count of 150 characters.</p>
+                      <div class="gel-meganav_dropdown__subnav-design"></div>
+                    </div>
+                    <ul class="list-unstyled card-columns">
+                      <li class="gel-meganav-mega-link"> <a href="#"><span class="gel-meganav-mega-link_title">Curriculum</span><span class="gel-meganav-mega-link_title-icon" aria-hidden="true"></span></a></li>
+                      <li class="gel-meganav-mega-link"> <a href="#"><span class="gel-meganav-mega-link_title">Aboriginal education and communities</span><span class="gel-meganav-mega-link_title-icon" aria-hidden="true"></span></a></li>
+                      <li class="gel-meganav-mega-link"> <a href="#"><span class="gel-meganav-mega-link_title">Professional learning</span><span class="gel-meganav-mega-link_title-icon" aria-hidden="true"></span></a></li>
+                      <li class="gel-meganav-mega-link"> <a href="#"><span class="gel-meganav-mega-link_title">Student assessment</span><span class="gel-meganav-mega-link_title-icon" aria-hidden="true"></span></a></li>
+                      <li class="gel-meganav-mega-link"> <a href="#"><span class="gel-meganav-mega-link_title">Disability,learning and support</span><span class="gel-meganav-mega-link_title-icon" aria-hidden="true"></span></a></li>
+                      <li class="gel-meganav-mega-link"> <a href="#"><span class="gel-meganav-mega-link_title">School excellence and accountability</span><span class="gel-meganav-mega-link_title-icon" aria-hidden="true"></span></a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="gel-meganav_dropdown nav-item dropdown dropdown-meganav"><a class="dropdown-toggle nav-link" data-toggle="dropdown" id="dropdownMenuButton" aria-haspopup="true" aria-expanded="false" href="#">Student wellbeing</a>
+                  <div class="dropdown-menu meganav gel-meganav_dropdown__subnav" aria-labelledby="dropdownMenuButton">
+                    <h3 class="gel-meganav_dropdown__subnav-title" aria-label="Student wellbeing"><a class="gel-meganav_dropdown__subnav-title-link" id="megalink4" href="#" aria-label="Student wellbeing">Student wellbeing</a></h3>
+                    <div class="gel-meganav_dropdown__subnav-desc">
+                      <p>Two line description about the top level navigation label which will assist in obtaining context with a maximum character count of 150 characters.</p>
+                      <div class="gel-meganav_dropdown__subnav-design"></div>
+                    </div>
+                    <ul class="list-unstyled card-columns">
+                      <li class="gel-meganav-mega-link"> <a href="#"><span class="gel-meganav-mega-link_title">Counselling and psychology services</span><span class="gel-meganav-mega-link_title-icon" aria-hidden="true"></span></a></li>
+                      <li class="gel-meganav-mega-link"> <a href="#"><span class="gel-meganav-mega-link_title">Attendance, behaviour and engagement</span><span class="gel-meganav-mega-link_title-icon" aria-hidden="true"></span></a></li>
+                      <li class="gel-meganav-mega-link"> <a href="#"><span class="gel-meganav-mega-link_title">Child protection</span><span class="gel-meganav-mega-link_title-icon" aria-hidden="true"></span></a></li>
+                      <li class="gel-meganav-mega-link"> <a href="#"><span class="gel-meganav-mega-link_title">Health and physical care </span><span class="gel-meganav-mega-link_title-icon" aria-hidden="true"></span></a></li>
+                      <li class="gel-meganav-mega-link"> <a href="#"><span class="gel-meganav-mega-link_title">Whole school approach</span><span class="gel-meganav-mega-link_title-icon" aria-hidden="true"></span></a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="gel-meganav_dropdown nav-item dropdown dropdown-meganav"><a class="dropdown-toggle nav-link" data-toggle="dropdown" id="dropdownMenuButton" aria-haspopup="true" aria-expanded="false" href="#">Our priorities</a>
+                  <div class="dropdown-menu meganav gel-meganav_dropdown__subnav" aria-labelledby="dropdownMenuButton">
+                    <h3 class="gel-meganav_dropdown__subnav-title" aria-label="Our priorities"><a class="gel-meganav_dropdown__subnav-title-link" id="megalink5" href="#" aria-label="Our priorities">Our priorities</a></h3>
+                    <div class="gel-meganav_dropdown__subnav-desc">
+                      <p>Two line description about the top level navigation label which will assist in obtaining context with a maximum character count of 150 characters.</p>
+                      <div class="gel-meganav_dropdown__subnav-design"></div>
+                    </div>
+                    <ul class="list-unstyled card-columns">
+                      <li class="gel-meganav-mega-link"> <a href="#"><span class="gel-meganav-mega-link_title">Work more effectively</span><span class="gel-meganav-mega-link_title-icon" aria-hidden="true"></span></a></li>
+                      <li class="gel-meganav-mega-link"> <a href="#"><span class="gel-meganav-mega-link_title">Ensure quality early childhood education</span><span class="gel-meganav-mega-link_title-icon" aria-hidden="true"></span></a></li>
+                      <li class="gel-meganav-mega-link"> <a href="#"><span class="gel-meganav-mega-link_title">Innovate for the future</span><span class="gel-meganav-mega-link_title-icon" aria-hidden="true"></span></a></li>
+                      <li class="gel-meganav-mega-link"> <a href="#"><span class="gel-meganav-mega-link_title">Enhance student wellbeing</span><span class="gel-meganav-mega-link_title-icon" aria-hidden="true"></span></a></li>
+                      <li class="gel-meganav-mega-link"> <a href="#"><span class="gel-meganav-mega-link_title">Improve student outcomes</span><span class="gel-meganav-mega-link_title-icon" aria-hidden="true"></span></a></li>
+                      <li class="gel-meganav-mega-link"> <a href="#"><span class="gel-meganav-mega-link_title">Strengthen teaching quality and school leadership</span><span class="gel-meganav-mega-link_title-icon" aria-hidden="true"></span></a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="gel-meganav_dropdown dropdown dropdown-meganav"><a class="nav-link" href="#">Policy library</a></li>
+                <li class="gel-meganav_dropdown nav-item dropdown dropdown-meganav"><a class="dropdown-toggle nav-link" data-toggle="dropdown" id="dropdownMenuButton" aria-haspopup="true" aria-expanded="false" href="#">About us</a>
+                  <div class="dropdown-menu meganav gel-meganav_dropdown__subnav" aria-labelledby="dropdownMenuButton">
+                    <h3 class="gel-meganav_dropdown__subnav-title" aria-label="About us"><a class="gel-meganav_dropdown__subnav-title-link" id="megalink7" href="#" aria-label="About us">About us</a></h3>
+                    <div class="gel-meganav_dropdown__subnav-desc">
+                      <p>Two line description about the top level navigation label which will assist in obtaining context with a maximum character count of 150 characters.</p>
+                      <div class="gel-meganav_dropdown__subnav-design"></div>
+                    </div>
+                    <ul class="list-unstyled card-columns">
+                      <li class="gel-meganav-mega-link"> <a href="#"><span class="gel-meganav-mega-link_title">Supplying to us</span><span class="gel-meganav-mega-link_title-icon" aria-hidden="true"></span></a></li>
+                      <li class="gel-meganav-mega-link"> <a href="#"><span class="gel-meganav-mega-link_title">Jobs and opportunities</span><span class="gel-meganav-mega-link_title-icon" aria-hidden="true"></span></a></li>
+                      <li class="gel-meganav-mega-link"> <a href="#"><span class="gel-meganav-mega-link_title">Our people and structure</span><span class="gel-meganav-mega-link_title-icon" aria-hidden="true"></span></a></li>
+                      <li class="gel-meganav-mega-link"> <a href="#"><span class="gel-meganav-mega-link_title">Rights and accountability</span><span class="gel-meganav-mega-link_title-icon" aria-hidden="true"></span></a></li>
+                      <li class="gel-meganav-mega-link"> <a href="#"><span class="gel-meganav-mega-link_title">Using school facilities</span><span class="gel-meganav-mega-link_title-icon" aria-hidden="true"></span></a></li>
+                      <li class="gel-meganav-mega-link"> <a href="#"><span class="gel-meganav-mega-link_title">Strategies and reports</span><span class="gel-meganav-mega-link_title-icon" aria-hidden="true"></span></a></li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="gel-section-header" role="banner">
+    <div class="container">
+      <div class="row">
+        <div class="col-2 gel-mobile-nav-indicator d-lg-none d-xl-none" aria-label="Megamenu mobile nav"><a class="b-mobile-nav--menu-btn left gel-mobile-nav-indicator_icon" id="menu-open" href="#gel-mnav" role="button" tabindex="0" aria-label="Click to open Megamenu mobile nav"></a></div>
+        <div class="col-8 gel-header-container">
+          <h1 class="gel-section-header__logo"><a href="#"> </a></h1>
+        </div>
+        <div class="col-2 gel-mobile-search-indicator">
+          <button class="gel-search__toggle gel-search__toggle-target collapsed" id="global-search-button" aria-label="Global search" aria-controls="global-search" data-toggle="collapse" data-target="#global-search" aria-expanded="false"><span class="show-on-sr">Global Search</span></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <form class="gel-search gel-search__toggle-target" id="global-search" action="#" aria-labelledby="global-search-button">
+    <fieldset>
+      <legend class="show-on-sr">Global Search</legend>
+      <div class="gel-searchbox gel-border gel-small">
+        <div class="form-group">
+          <div class="input-group">
+            <input class="form-control" type="text" placeholder="Search">
+            <div class="input-group-append">
+              <button class="btn gel-button"><span class="fas fa-search"> </span></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </fieldset>
+  </form>
+  <div class="container">
+    <nav class="gel-breadcrumbs activated" aria-label="breadcrumb">
+      <div class="gel-breadcrumbs-visibility d-md-none"><a class="gel-breadcrumbs__link" title="Go back to parent page" href="#"><span class="gel-breadcrumbs__link-icon" aria-hidden="true"></span>One morning when Gregor Samsa woke </a>
+      </div>
+      <div class="gel-breadcrumbs-visibility d-none d-md-block">
+        <ol class="gel-breadcrumbs__list breadcrumb">
+          <li class="gel-breadcrumbs__item-home breadcrumb-item" data-tooltip="Home" style=""><a class="gel-breadcrumbs__item-link" href="#" title="Go to NSW Department of Education homepage"><span class="gel-breadcrumbs__item-home-icon" aria-hidden="true"></span><span class="show-on-sr">Home</span></a></li>
+          <li class="gel-breadcrumbs__item breadcrumb-item gel-breadcrumbs__truncate" data-tooltip="His many legs pitifully thin compared with " style="max-width: 22.42%;"><a class="gel-breadcrumbs__item-link" href="#">His many legs pitifully thin compared with </a></li><li class="gel-breadcrumbs__item gel-breadcrumbs__dropdown"><div><p><a class="gel-breadcrumbs__item-link" href="#">His room a proper human room although </a><span class="gel-breadcrumbs__dropdown-icon" aria-hidden="true"></span></p><p><a class="gel-breadcrumbs__item-link" href="#">and above it there hung a picture </a><span class="gel-breadcrumbs__dropdown-icon" aria-hidden="true"></span></p><p><a class="gel-breadcrumbs__item-link" href="#">Drops of rain could be heard hitting </a><span class="gel-breadcrumbs__dropdown-icon" aria-hidden="true"></span></p><p><a class="gel-breadcrumbs__item-link" href="#">He must have tried it a hundred </a><span class="gel-breadcrumbs__dropdown-icon" aria-hidden="true"></span></p></div></li>
+
+
+
+
+          <li class="gel-breadcrumbs__item breadcrumb-item gel-breadcrumbs__truncate" data-tooltip="One morning when Gregor Samsa woke from " style="max-width: 22.42%;"><a class="gel-breadcrumbs__item-link" href="#">One morning when Gregor Samsa woke from </a></li>
+          <li class="gel-breadcrumbs__item breadcrumb-item gel-breadcrumbs__truncate" data-tooltip="His many legs pitifully thin compared with " style="max-width: 22.42%;"><a class="gel-breadcrumbs__item-link" href="#">His many legs pitifully thin compared with </a></li>
+          <li class="gel-breadcrumbs__item breadcrumb-item active gel-breadcrumbs__truncate" aria-current="page" data-tooltip="His room a proper human room although " style="max-width: 22.42%;"><span class="gel-breadcrumbs__item-active">His room a proper human room although </span></li>
+        </ol>
+      </div>
+    </nav>
+  </div>
+  <span id="content" tabindex="-1"></span>
+
+  
+  <main class="gel-main container">
     <div id="app"></div>
-    <!-- built files will be auto injected -->
-  </body>
+  </main>
+
+
+  <div class="school-finder-footerimage-wrapper"></div>
+
+  <footer>
+    <div class="gel-section-footer" aria-label="Section Footer">
+      <div class="gel-section-footer__variation-1">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-lg-4">
+              <div class="row section-footer-panel-header">
+                <div class="col-md-6 col-lg-12">
+                  <div class="gel-social-icons-panel">
+                    <h3>Say Hello</h3>
+                    <ul class="gel-social-icons-panel_links">
+                      <li class="gel-social-icons-panel_links-list"><a class="gel-social-icons-panel_links-list-icon" href="#" aria-label="NSW DoE profile on facebook"><span class="gel-social-icons-panel_links-list-facebook" aria-hidden="true"></span></a></li>
+                      <li class="gel-social-icons-panel_links-list"><a class="gel-social-icons-panel_links-list-icon" href="#" aria-label="NSW DoE profile on linkedin"><span class="gel-social-icons-panel_links-list-linkedin" aria-hidden="true"></span></a></li>
+                      <li class="gel-social-icons-panel_links-list"><a class="gel-social-icons-panel_links-list-icon" href="#" aria-label="NSW DoE profile on twitter"><span class="gel-social-icons-panel_links-list-twitter" aria-hidden="true"></span></a></li>
+                      <li class="gel-social-icons-panel_links-list"><a class="gel-social-icons-panel_links-list-icon" href="#" aria-label="NSW DoE profile on instagram"><span class="gel-social-icons-panel_links-list-instagram" aria-hidden="true"></span></a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-12">
+                  <div class="gel-acknowledgement">
+                    <div class="container">
+                      <p>We acknowledge the homelands of all Aboriginal people and pay our respect to Country.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-8">
+              <h3>Section Footer Links Title</h3>
+              <div class="gel-link-columns">
+                <ul class="gel-link-list gel-link-columns__items gel-link-columns--2col gel-link-columns--condensed">
+                  <li><span class="gel-link-columns-icon" aria-hidden="true"></span><a href="#">Drops of rain could be heard.</a>
+                  </li>
+                  <li><span class="gel-link-columns-icon" aria-hidden="true"></span><a href="#">He must have tried it a.</a>
+                  </li>
+                  <li><span class="gel-link-columns-icon" aria-hidden="true"></span><a href="#">One morning, when Gregor Samsa woke.</a>
+                  </li>
+                  <li><span class="gel-link-columns-icon" aria-hidden="true"></span><a href="#">His many legs, pitifully thin compared.</a>
+                  </li>
+                  <li><span class="gel-link-columns-icon" aria-hidden="true"></span><a href="#">His room, a proper human room.</a>
+                  </li>
+                  <li><span class="gel-link-columns-icon" aria-hidden="true"></span><a href="#">and above it there hung a.</a>
+                  </li>
+                  <li><span class="gel-link-columns-icon" aria-hidden="true"></span><a href="#">Drops of rain could be heard.</a>
+                  </li>
+                  <li><span class="gel-link-columns-icon" aria-hidden="true"></span><a href="#">He must have tried it a.</a>
+                  </li>
+                  <li><span class="gel-link-columns-icon" aria-hidden="true"></span><a href="#">One morning, when Gregor Samsa woke.</a>
+                  </li>
+                  <li><span class="gel-link-columns-icon" aria-hidden="true"></span><a href="#">His many legs, pitifully thin compared.</a>
+                  </li>
+                  <li><span class="gel-link-columns-icon" aria-hidden="true"></span><a href="#">His room, a proper human room.</a>
+                  </li>
+                  <li><span class="gel-link-columns-icon" aria-hidden="true"></span><a href="#">and above it there hung a.</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div class="gel-global-footer" aria-label="Global Footer">
+    <h1 class="show-on-sr">NSW Department of Education</h1>
+    <div class="container gel-remove-external-link">
+      <div class="row">
+        <div class="col-12 col-md-2 col-lg-4 gel-global-footer__logo">
+          <div class="gel-corporate-logo"><a class="gel-corporate-logo__link" href="https://education.nsw.gov.au" title="NSW Department of Education"><img class="gel-corporate-logo__image" src="assets/images/doe-logo-white.png" alt="NSW Department of Education logo"><span class="sr-only">External link</span><span class="gel-external-link"></span></a></div>
+        </div>
+        <div class="col-12 col-md-10 col-lg-8 gel-global-footer__links">
+          <div class="gel-link-columns">
+            <ul class="gel-link-list gel-link-columns__items gel-link-columns--2col">
+              <li><span class="gel-link-columns-icon" aria-hidden="true"></span><a href="#">Drops of rain could be heard.</a>
+              </li>
+              <li><span class="gel-link-columns-icon" aria-hidden="true"></span><a href="#">He must have tried it a.</a>
+              </li>
+              <li><span class="gel-link-columns-icon" aria-hidden="true"></span><a href="#">One morning, when Gregor Samsa woke.</a>
+              </li>
+              <li><span class="gel-link-columns-icon" aria-hidden="true"></span><a href="#">His many legs, pitifully thin compared.</a>
+              </li>
+              <li><span class="gel-link-columns-icon" aria-hidden="true"></span><a href="#">His room, a proper human room.</a>
+              </li>
+              <li><span class="gel-link-columns-icon" aria-hidden="true"></span><a href="#">and above it there hung a.</a>
+              </li>
+              <li><span class="gel-link-columns-icon" aria-hidden="true"></span><a href="#">Drops of rain could be heard.</a>
+              </li>
+              <li><span class="gel-link-columns-icon" aria-hidden="true"></span><a href="#">He must have tried it a.</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="edu-footerimage-wrapper">
+      <div class="edu-footerimage-container edu-footer-bkgimage"></div>
+    </div>
+  </div>
+
+  <!-- <script src="assets/js/vendor/require.js?r=97efe053" data-main="assets/js/main.js?r=97efe053" data-site-config-path="config/"
+    type="text/javascript"></script> -->
+  <script type="text/javascript">
+    (function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date(); a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    // UA-83551518-1 GA profile for dec-ce.bitbucket.org
+    if (document.cookie.match(/UserID/)) {
+      ga('create', 'UA-83551518-1', 'auto', {
+        userId: document.cookie.match(new RegExp('UserID=([^;]+)'))[1]
+      });
+    } else {
+      ga('create', 'UA-83551518-1', 'auto');
+    }
+
+    ga('send', 'pageview');
+  </script>
+
+  <script src="assets/js/vendor/jquery.js" type="text/javascript"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" type="text/javascript"></script>
+  <script src="assets/js/vendor/moment/moment.js" type="text/javascript"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" type="text/javascript"></script>
+  <script src="assets/js/vendor/bootstrap/bootstrap.bundle.min.js" type="text/javascript"></script>
+  <script src="assets/js/vendor/rousan/es6-promise-shim.js" type="text/javascript"></script>
+  <script src="assets/js/vendor/whatwg-fetch/fetch.js"></script><!-- include any component specific scripts here //-->
+  <script src="assets/js/components/anchorBox.js" type="text/javascript"></script>
+  <script src="assets/js/components/keyCodes.js" type="text/javascript"></script>
+  <script src="assets/js/components/ariaToggler.js" type="text/javascript"></script>
+  <script src="assets/js/components/classManipulator.js" type="text/javascript"></script>
+  <script src="assets/js/components/breadCrumbs.js" type="text/javascript"></script>
+  <script src="assets/js/components/drawer.js" type="text/javascript"></script>
+  <script src="assets/js/components/scrollToggle.js" type="text/javascript"></script>
+  <script src="assets/js/components/sideNavigation.js" type="text/javascript"></script>
+  <script src="assets/js/components/externalLinkTagger.js" type="text/javascript"></script>
+  <script src="assets/js/vendor/jquery-accessible-tabpanel-aria/jquery-accessible-tabs.js" type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/7.3.3/jquery.mmenu.all.js" type="text/javascript"></script>
+  <script src="assets/js/components/mobileMegaNav.js" type="text/javascript"></script>
+  <script src="assets/js/components/skipForFirefox.js" type="text/javascript"></script>
+</body>
+
 </html>
